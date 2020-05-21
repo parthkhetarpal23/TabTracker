@@ -11,9 +11,9 @@ app.use(cors()) // need cors if you need server to be hosted on any domain and c
 
 // simple endpoint to check server
  // define routes in express: give it method you want to use eg: get post put patch delete
-app.get('/status', (req,res) => {   //app.<name of command> status endpoint
+app.post('/register', (req,res) => {   //app.<name of command> status endpoint
 res.send({                          // once we get a request on the server, we can send back message.
-    message : 'hello world!!'
+    message: `Hello ${req.body.email} !, you have been registered successfully.`
 })
 })
 
